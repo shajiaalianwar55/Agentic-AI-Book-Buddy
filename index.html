@@ -51,13 +51,8 @@
 
 
     /* Buttons */
-    .buttons {
-      margin-top: 28px;
-    }
-
-    .btn {
+.btn {
   display: inline-block;
-  margin-right: 15px;
   padding: 12px 22px;
   background: linear-gradient(135deg, #410200, #6a0f0a);
   color: #f5f5f4;
@@ -67,6 +62,27 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.btn.secondary {
+  background-color: #1c0a08;
+  border: 1px solid #410200;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+}
+
+@media (max-width: 640px) {
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .buttons .btn {
+    width: fit-content;
+  }
+}
 
     .btn.secondary {
   background-color: #1c0a08;
